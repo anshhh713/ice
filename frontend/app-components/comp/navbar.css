@@ -1,0 +1,79 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0px;
+    background-color: rgb(247, 227, 227);
+    height: 10vh;
+    width: 100vw;
+    position:fixed;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.search-button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgba(160, 227, 246, 0.9);
+
+}
+.search-b:hover{
+    transform: scale(1.1);
+    transition: all 1ms ease-in-out;
+}
+.search{
+    border-radius: 18px;
+    padding: 8px 25px;
+    text-align: center;
+    border-color: rgba(160, 227, 246, 0.9);
+}
+
+
+
+.profile{
+    padding-right: 10px;
+}
+
+.logo-bar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: auto;
+    padding-left: 1rem;
+    gap: 4px;
+}
+
+.logo{
+    width: 2rem;
+    color: rgba(160, 227, 246, 0.9);
+}
+
+.logo:hover{
+    transform: rotate(2160deg) scale(1.05);
+    transition: all 3s ease-in-out;
+}
+
+.placehold> ul{
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
+    align-items: center;
+    list-style: none;
+}
+.placehold a{
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0.1rem 0.3rem;
+    
+}
+
+.placehold>ul>li> a:hover{
+    background-color: pink;
+    border-color: pink;
+    
+}

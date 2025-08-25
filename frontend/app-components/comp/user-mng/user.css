@@ -1,0 +1,20 @@
+.user-bar{
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    gap: 10px;
+}
+.user-dp{
+    margin-right: 0.5rem;
+    border-radius: 3rem;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+}
+.user-dp:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}

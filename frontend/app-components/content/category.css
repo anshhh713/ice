@@ -1,0 +1,24 @@
+.category{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 2px;
+    width: auto;
+    max-width: 10vw;
+    gap: 0.6rem;
+    /* min-width: auto; */
+    border: 1px solid black;
+    
+    margin: 3px 4px;
+}
+
+.category:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#d{
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
