@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import Snowflake from "../../../public/ice.svg";
+import Image from "next/image";
 import { Search } from "lucide-react";
 import "./navbar.css";
 import User from "./user-mng/user";
@@ -9,7 +9,7 @@ const Navbar: FC = () => {
     <>
       <nav className="navbar">
         <div className="logo-bar">
-          <svg className="logo" />
+           <Image src="/ice.svg" alt="ICE Logo" width={32} height={32} className="logo" />
           <h2>ICE</h2>
         </div>
         <div className="placehold">
