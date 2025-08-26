@@ -1,6 +1,6 @@
 import "./card-holder.css";
 import type { FC } from "react";
-import Card from "./card.tsx";
+import Card from "./card";
 
 const CardHolder: FC = () => {
   return (
