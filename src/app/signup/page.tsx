@@ -25,7 +25,7 @@ export default function SignupPage() {
           <input type="text" name="username" value={user.username} onChange={(e) => setUser({ ...user, username: e.target.value })} placeholder="username" required />
         </label>
         <button onClick={onSignUp} type="submit">Signup</button>
-        <p>Already have an account? <a href="/frontend/login">Login</a></p>
+        <p>Already have an account? <a href="/login">Login</a></p>
       </form>
     </>
   );

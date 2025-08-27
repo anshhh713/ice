@@ -39,7 +39,7 @@ export default function LoginPage() {
             Login
           </button>
           <p>
-            Don't have an account? <a href="/frontend/signup">Signup</a>
+            Don't have an account? <a href="/signup">Signup</a>
           </p>
         </form>
       </div>
