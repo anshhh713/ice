@@ -1,11 +1,12 @@
 import './banner.css'
-import type { FC } from 'react'
 
-const Banner: FC = () => {
+import Image from 'next/image'
+
+const Banner = () => {
   return (
     <div className="banner">
-      <h1>Welcome to ICE</h1>
-      <p>Your one-stop solution for all your needs</p>
+      <Image className='banner-image' src="/banner.jpg" width={1173} height={360} alt='banner' />
+      
     </div>
   )
 }

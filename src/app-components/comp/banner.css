@@ -4,5 +4,13 @@
     align-items: center;
     width: 100vw;
     height: 70vh;
-    border: 1px dashed limegreen;
+    
+    margin-top: 10vh;
+}
+.banner-image{
+    width: 100vw;
+    height: 70vh;
+    object-fit: cover;
+    opacity: 0.9;
+    background-color: rgba(255, 58, 58, 0.984);
 }

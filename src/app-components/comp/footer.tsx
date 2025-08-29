@@ -1,9 +1,9 @@
 import "./footer.css";
-import type { FC } from "react";
+
 type FooterProps = {
   author: string;
 };
-const Footer: FC<FooterProps> = (props) => {
+const Footer = ({author}: FooterProps) => {
   return (
     <div className="footer">
       <p>© {new Date().getFullYear()} ICE. All rights reserved.</p>
@@ -18,7 +18,7 @@ const Footer: FC<FooterProps> = (props) => {
         Made with ❤️ using Vite + React + TypeScript
       </p>
       <p className="credits">
-        Authors - Ansh Rawat, Rei WuZen, {props.author}
+        Authors - Ansh Rawat, Rei WuZen, {author}
       </p>
     </div>
   );

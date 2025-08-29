@@ -1,12 +1,12 @@
 import './card.css'
-import type { FC } from 'react'
+
 
 type CardProps = {
     title: string
     desc: string
 }
 
-const Card: FC<CardProps> = (props) => {
+const Card = ({title, desc}: CardProps) => {
     return (
         <>
             <div className="card">
@@ -14,8 +14,8 @@ const Card: FC<CardProps> = (props) => {
                     <img src="#" alt="card-photo" />
                 </div>
                 <div className="card-label">
-                    <h3>{props.title}</h3>
-                    <p>{props.desc}</p>
+                    <h3>{title}</h3>
+                    <p>{desc}</p>
                 </div>
             </div>
         </>

@@ -1,16 +1,15 @@
-import './user.css';
-import type { FC } from 'react';
-type UserProps ={
-    dn:string;
-    dp: string;
-}
+import "./user.css";
 
-const User: FC<UserProps> = (props) => {
-    return (
-        <div className="user-bar">
-            <h3 className={"user-dn"} >{props.dn}</h3>
-            <img src={props.dp}alt="user-icon" className={"user-dp"} />
-        </div>
-    )
+type UserProps = {
+  dn: string;
+  dp: string;
+};
+
+export default function User({ dn, dp }: UserProps) {
+  return (
+    <div className="user-bar">
+      <h3 className="user-dn">{dn}</h3>
+      <img src={dp} alt={`${dn}-icon`} className="user-dp" />
+    </div>
+  );
 }
-export default User;
