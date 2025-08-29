@@ -12,16 +12,30 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo-bar">
-        <Image src="/ice.svg" alt="ICE Logo" width={32} height={32} className="logo" />
+        <Image
+          src="/ice.svg"
+          alt="ICE Logo"
+          width={32}
+          height={32}
+          className="logo"
+        />
         <h2>ICE</h2>
       </div>
 
       <div className="placehold">
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Contact Us</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Features</a></li>
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">Contact Us</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+          <li>
+            <a href="">Features</a>
+          </li>
         </ul>
       </div>
 
@@ -31,12 +45,13 @@ export default function Navbar() {
           <Search className="search-b" />
         </button>
       </div>
-
-      {isLoggedIn ? (
-        <User dn="John Cena" dp="/jhoncena.jpg" />
-      ) : (
-        <Login oc={() => setIsLoggedIn(true)} />
-      )}
+      <div className="userprofile">
+        {isLoggedIn ? (
+          <User dn="John Cena" dp="/jhoncena.jpg" mode={1} />
+        ) : (
+          <Login oc={() => setIsLoggedIn(true)} />
+        )}
+      </div>
     </nav>
   );
 }

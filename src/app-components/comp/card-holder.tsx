@@ -1,15 +1,15 @@
 import "./card-holder.css";
 
 import Card from "./card";
-
-const CardHolder = () => {
+type CardHolderProps = {
+  cards: { title: string; desc: string }[];
+};
+const CardHolder = ({ cards }: CardHolderProps) => {
   return (
     <div className="card-holder">
-      <Card title="Card1" desc="desc1" />
-      <Card title="Card2" desc="desc2" />
-      <Card title="Card3" desc="desc3" />
-      <Card title="Card4" desc="desc4" />
-      <Card title="Card5" desc="desc5" />
+      {cards.map((card, index) => (
+        <Card key={index} title={card.title} desc={card.desc} />
+      ))}
     </div>
   );
 };
