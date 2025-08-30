@@ -1,4 +1,4 @@
-.category{
+.tags{
     display: flex;
     justify-content: space-between;
     padding: 3px 2px;
@@ -11,7 +11,7 @@
     margin: 3px 4px;
 }
 
-.category:hover{
+.tags:hover{
     cursor: pointer;
     transform: scale(1.05);
 }

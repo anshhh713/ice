@@ -1,16 +1,16 @@
-import './category.css'
+import './tags.css'
 import type { FC } from 'react'
 
-type CategoryProps = {
+type TagsProps = {
     title: string
     count: number
 }
-const Category: FC<CategoryProps> = (props) => {
+const Tags: FC<TagsProps> = (props) => {
     return (
-        <div className="category">
+        <div className="tags">
             <h4>{props.title}</h4>
             <h4 id='d'>{props.count}</h4>
         </div>
     )
 }
-export default Category
+export default Tags

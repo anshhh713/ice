@@ -2,8 +2,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Search } from "lucide-react";
-import User from "./user-mng/user";
-import Login from "./user-mng/login";
+import User from "../../comp/user-mng/user";
+import Login from "../../comp/user-mng/login";
 import "./navbar.css";
 
 export default function Navbar() {

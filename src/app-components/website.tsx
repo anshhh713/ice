@@ -1,8 +1,8 @@
 import "./website.css";
-import Navbar from "./comp/navbar";
-import Banner from "./comp/banner";
-import MainContent from "./content/main-content";
-import Footer from "./comp/footer";
+import Navbar from "./content/navbar/navbar";
+import Banner from "./content/banner/banner";
+import MainContent from "./content/main-content/main-content";
+import Footer from "./content/footer/footer";
 export default function Website() {
   return (
     <>
