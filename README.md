@@ -1,18 +1,25 @@
-# ICE
-ICE is a template for anime/video streaming website with full-stack.
-using nextjs + psql + nodejs, all in typescript
+# ICE  
 
-### Abbreations(used)
-```md
-| abbreation   | Meaning|
-|---------|-----|
-| t1  |  type1 |
-| t2     |  type2 |
-| l1 | layer 1 |
-| l2 | layer 2 |
+ICE is a template for an anime/video streaming website with a **full-stack** setup.  
+Built using **Next.js + Node.js + PostgreSQL**, all written in **TypeScript**.  
 
-```
-Inline `code`
+---
+
+### 📖 Abbreviations Used
+
+| Abbreviation | Meaning  |
+|--------------|----------|
+| t1           | type 1   |
+| t2           | type 2   |
+| l1           | layer 1  |
+| l2           | layer 2  |
+
+---
+
+### ⚡ Installation & Setup
+
+Inline `code` example:  
+
 ```bash
 pnpm install
 pnpm dev
