@@ -6,6 +6,7 @@ const BannerT2 = () => {
   return (
     <div className="banner-container-t2">
       <Image className="banner-image-t2" src="/banner.jpg" alt="banner" fill />
+      <div className="banner-overlay-t2"></div>
       <div className="banner-content-t2">
         <h2 className="banner-title-t2">ICE</h2>
 
@@ -20,37 +21,52 @@ const BannerT2 = () => {
 
         <div className="filter-search-t2">
           <ul>
-            <li>Top Search :</li>
-            <a href="#">
-              <li className="cont">One Piece,</li>
-            </a>
-            <a href="#">
-              <li className="cont">Kaiju No. 8 Season 2,</li>
-            </a>
-            <a href="#">
-              <li className="cont">Dan Da Dan Season 2,</li>
-            </a>
-            <a href="#">
-              <li className="cont">Demon Slayer: Kimetsu no...</li>
-            </a>
-            <a href="#">
-              <li className="cont">Lord of Mysteries</li>
-            </a>
-            <a href="#">
-              <li className="cont">The Fragrant Flower Bloom...</li>
-            </a>
-            <a href="#">
-              <li className="cont">The Fragrant Flower Bloom...</li>
-            </a>
-            <a href="#">
-              <li className="cont">Attack on Titan,</li>
-            </a>
-            <a href="#">
-              <li className="cont">Naruto: Shippuden,</li>
-            </a>
-            <a href="#">
-              <li className="cont">...</li>
-            </a>
+            <li>Top Search</li>
+            <li>
+              <a href="#" className="cont">
+                One Piece,
+              </a>
+            </li>
+            <li>
+              <a href="#" className="cont">
+                Kaiju No. 8 Season 2,
+              </a>
+            </li>
+            <li>
+              <a href="#" className="cont">
+                Dan Da Dan Season 2,
+              </a>
+            </li>
+            <li>
+              <a href="#" className="cont">
+                Demon Slayer: Kimetsu no...
+              </a>
+            </li>
+            <li>
+              <a href="#" className="cont">
+                Lord of Mysteries
+              </a>
+            </li>
+            <li>
+              <a href="#" className="cont">
+                The Fragrant Flower Bloom...
+              </a>
+            </li>
+            <li>
+              <a href="#" className="cont">
+                Attack on Titan,
+              </a>
+            </li>
+            <li>
+              <a href="#" className="cont">
+                Naruto: Shippuden,
+              </a>
+            </li>
+            <li>
+              <a href="#" className="cont">
+                ...
+              </a>
+            </li>
           </ul>
         </div>
 
