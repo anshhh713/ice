@@ -1,0 +1,8 @@
+.heading{
+    padding: 10px;
+}
+.tag-sec{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}

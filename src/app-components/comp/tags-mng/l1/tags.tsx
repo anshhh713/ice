@@ -1,15 +1,15 @@
 import './tags.css'
-import type { FC } from 'react'
+
 
 type TagsProps = {
     title: string
     count: number
 }
-const Tags: FC<TagsProps> = (props) => {
+const Tags= ({title, count}: TagsProps) => {
     return (
         <div className="tags">
-            <h4>{props.title}</h4>
-            <h4 id='d'>{props.count}</h4>
+            <h4 id='t'>{title}</h4>
+            <h4 id='d'>{count}</h4>
         </div>
     )
 }

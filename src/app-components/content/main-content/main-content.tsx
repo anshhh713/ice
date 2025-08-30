@@ -1,12 +1,12 @@
 import "./main-content.css";
 
-import CardSec from "../../comp/card-mng/card-sec";
+import CardSec from "@/app-components/comp/card-mng/t1/card-sec";
 import SideContent from "../side-content/side-content";
 
 const MainContent = () => {
   return (
     <div className="main-content">
-      <CardSec
+            <CardSec
         categories={[
           {
             filter: "Popular",
@@ -56,7 +56,7 @@ const MainContent = () => {
         ]}
       />
 
-      <SideContent title="Categories" />
+      <SideContent  />
     </div>
   );
 };

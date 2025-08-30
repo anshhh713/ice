@@ -1,0 +1,23 @@
+.card-holder-t2{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-bunch{
+    display: flex;
+    
+    flex-wrap: wrap;
+    gap: 16px;
+    border: 1px solid black;
+    padding: 10px 10px 10px 10px; /*top, left, btm , right*/
+    
+}
+.heading{
+    font-size: 2rem;
+    padding: 10px;
+}

@@ -1,28 +1,28 @@
 import "./side-content.css";
-import type { FC } from "react";
-import Tags from "../../comp/tags";
+
+import TagSec from "@/app-components/comp/tags-mng/tag-sec";
 type SideContentProps = {
   title: string;
 };
-const SideContent: FC<SideContentProps> = (props) => {
+const SideContent = () => {
   return (
     <div className="side-content">
-      <div className="heading">
-        <h3>{props.title}</h3>
-      </div>
       <div className="cat-box">
-        <Tags title={"hello"} count={1} />
-        <Tags title={"hello"} count={1} />
-        <Tags title={"hello"} count={1} />
-        <Tags title={"hello"} count={1} />
-        <Tags title={"hello"} count={1} />
-        <Tags title={"hello"} count={1} />
-        <Tags title={"hello"} count={1} />
-        <Tags title={"hello"} count={1} />
-        <Tags title={"hello"} count={1} />
-        <Tags title={"hello"} count={1} />
-        <Tags title={"hello"} count={1} />
-        <Tags title={"ahegao"} count={90} />
+        <TagSec
+          tag={[
+            {
+              tagheading: "Tags",
+              tag: [
+                { title: "Action", count: 1 },
+                { title: "Adventure", count: 2 },
+                { title: "Cars", count: 3 },
+                { title: "Comedy", count: 4 },
+                { title: "Demon", count: 5 },
+                
+              ],
+            },
+          ]}
+        />
       </div>
     </div>
   );

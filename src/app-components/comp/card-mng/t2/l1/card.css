@@ -1,0 +1,35 @@
+.card-t2{
+    display: flex;
+    margin: 10px 10px 10px;
+    height: 69vh;
+    width: 22vw;
+    border: 1px solid black;
+    border-radius: 0px 0px 0px 0px;
+}
+.card-t2:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.card-label{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    justify-content: flex-start;
+    align-self: center;
+    gap: 10px;
+    
+}
+.title{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+.card-photo-t2{
+    width: 96%;
+    height: 100%;
+}
+.image{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 0px 0px;
+}

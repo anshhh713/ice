@@ -1,0 +1,29 @@
+.tags{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    height: 4vh;
+    padding: 0.24rem 0.6rem;
+    
+    width: auto;
+    max-width: 10vw;
+    background-color: aqua;
+    border-radius: 1rem;
+    gap: 0.4rem;
+    
+}
+
+.tags:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#d{
+    font-size: 0.5rem;
+    
+}
+#t{
+    font-size: 0.875rem;
+
+}
