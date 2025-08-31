@@ -10,7 +10,7 @@ const BannerT2 = () => {
       <div className="banner-content-t2">
         <h2 className="banner-title-t2">ICE</h2>
 
-        <div className="banner-search-wrapper">
+        <div className="banner-search-wrapper-t2">
           <input
             className="banner-search-t2"
             type="search"

@@ -14,7 +14,7 @@ const CardT2 = ({ title, rank, imageSrc, imageAlt }: CardProps) => {
     <>
       <div className="card-t2">
         <div className="card-label-t2">
-          <h3>{rank}</h3>
+          <h3 className="rank-t2">{rank}</h3>
           <h3 className="title-t2">{title}</h3>
         </div>
         <div className="card-photo-t2">

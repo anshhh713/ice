@@ -1,3 +1,4 @@
+"use client"
 export default function UserProfilePage({params}: any){
     return (
         <div className="profile-page">

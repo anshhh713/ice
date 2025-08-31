@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
-import Styles from './style.module.css';
+import Styles from './page.module.css';
 export default function LoginPage() {
   const [user, setUser] = React.useState({
     email: "",
@@ -10,9 +10,11 @@ export default function LoginPage() {
   const onLogin = async () => {};
   return (
     <>
+    <div className={Styles.testWrapper}>
+
       <div className={Styles.login}>
-        <h1>Login</h1>
-        <form className={Styles.form}>
+        <h1 className={Styles.pageTitle}>Login</h1>
+        <div className={Styles.loginDiv}>
           <label className={Styles.label}>
             Email:
             <input className={Styles.input}
@@ -35,14 +37,15 @@ export default function LoginPage() {
               required
             />
           </label>
-          <button onClick={onLogin} type="submit">
+          <button className={Styles.loginBtn} onClick={onLogin} type="submit">
             Login
           </button>
-          <p>
+          <p className={Styles.signupText}>
             Don't have an account? <a href="/signup">Signup</a>
           </p>
-        </form>
+        </div>
       </div>
+    </div>
     </>
   );
 }
