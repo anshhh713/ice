@@ -1,9 +1,0 @@
-.card-holder{
-    padding: 1rem 1.3rem;
-    width: 100%;
-    height: auto;
-    /* border: 1px solid black; */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.3rem;
-}

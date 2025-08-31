@@ -1,5 +1,7 @@
 .alt1{
     display: flex;
+    width: 100vw;
+    height: auto;
 }
 .alt1-title{
     padding: 1rem;

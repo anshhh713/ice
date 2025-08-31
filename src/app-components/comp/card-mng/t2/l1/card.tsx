@@ -1,27 +1,34 @@
-import './card.css'
-import Image from 'next/image'
+import "./card.css";
+import Image from "next/image";
 
 type CardProps = {
-    title: string
-    rank:string
-    image:string
-    imageAlt:string
-}
+  title: string;
+  rank: string;
+  imageSrc: string;
+  imageAlt: string;
+};
 
-const CardT2 = ({title, rank, image, imageAlt}: CardProps) => {
-    return (
-        <>
-            <div className="card-t2">
-                <div className="card-label">
-                    <h3>{rank}</h3>
-                    <h3 className='title'>{title}</h3>
-                    
-                </div>
-                <div className="card-photo-t2">
-                    <Image className='image' src={image} alt={imageAlt} width={225} height={225} />
-                </div>
-            </div>
-        </>
-    )
-}
-export default CardT2
+const CardT2 = ({ title, rank, imageSrc, imageAlt }: CardProps) => {
+  
+  return (
+    <>
+      <div className="card-t2">
+        <div className="card-label-t2">
+          <h3>{rank}</h3>
+          <h3 className="title-t2">{title}</h3>
+        </div>
+        <div className="card-photo-t2">
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            
+            width={436}
+            height={745}
+            className="image-t2"
+          />
+        </div>
+      </div>
+    </>
+  );
+};
+export default CardT2;

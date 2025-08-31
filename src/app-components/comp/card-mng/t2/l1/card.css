@@ -1,16 +1,18 @@
 .card-t2{
     display: flex;
     margin: 10px 10px 10px;
-    height: 69vh;
+    height: 65vh;
     width: 22vw;
     border: 1px solid black;
     border-radius: 0px 0px 0px 0px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
 .card-t2:hover{
-    transform: scale(1.05);
-    cursor: pointer;
+    transform: scale(1.01);
 }
-.card-label{
+.card-label-t2{
+    width: 8%;
     display: flex;
     flex-direction: column-reverse;
     height: 100%;
@@ -19,16 +21,17 @@
     gap: 10px;
     
 }
-.title{
+.title-t2{
     writing-mode: vertical-lr;
     transform: rotate(180deg);
 }
 .card-photo-t2{
-    width: 96%;
+    width: 92%;
     height: 100%;
 }
-.image{
+.image-t2{
     object-fit: cover;
+    object-position: center;
     width: 100%;
     height: 100%;
     border-radius: 0px 0px 0px 0px;

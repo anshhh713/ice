@@ -1,4 +1,15 @@
 .main-content{
     display: flex;
+    flex-direction: column;
     width: 100vw;
+    height: auto;
+}
+.p2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* display: none; */
+}
+.p1{
+    display: flex;
 }

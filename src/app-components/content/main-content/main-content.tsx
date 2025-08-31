@@ -1,62 +1,108 @@
 import "./main-content.css";
-
-import CardSec from "@/app-components/comp/card-mng/t1/card-sec";
+import Alt1 from "../alt1/alt1";
+import CardHolderT1 from "@/app-components/comp/card-mng/t1/card-holder";
 import SideContent from "../side-content/side-content";
 
 const MainContent = () => {
   return (
     <div className="main-content">
-            <CardSec
-        categories={[
-          {
-            filter: "Popular",
-            cards: [
-              {
-                title: "Card 1",
-                desc: "First",
-                image: "/jhoncena.jpg",
-                imageAlt: "one",
-              },
-              {
-                title: "Card 2",
-                desc: "Second",
-                image: "/jhoncena.jpg",
-                imageAlt: "two",
-              },
-            ],
-          },
-          {
-            filter: "Ongoing",
-            cards: [
-              {
-                title: "Card 3",
-                desc: "Third",
-                image: "/jhoncena.jpg",
-                imageAlt: "three",
-              },
-            ],
-          },
-          {
-            filter: "Trending",
-            cards: [
-              {
-                title: "Card 4",
-                desc: "Fourth",
-                image: "/jhoncena.jpg",
-                imageAlt: "four",
-              },
-              {
-                title: "Card 5",
-                desc: "Fifth",
-                image: "/jhoncena.jpg",
-                imageAlt: "five",
-              },
-            ],
-          },
-        ]}
-      />
-
-      <SideContent  />
+      <div className="p1">
+        <Alt1 />
+      </div>
+      <div className="p2">
+        <CardHolderT1
+          card={[
+            {
+              filter: "Popular",
+              card: [
+                {
+                  title: "One Piece",
+                  imageSrc: "/luffy.jpg",
+                  imageAlt: "Luffy",
+                  rank: 1,
+                },
+                {
+                  title: "Naruto",
+                  imageSrc: "/naruto.jpg",
+                  imageAlt: "Naruto Uzumaki",
+                  rank: 2,
+                },
+                {
+                  title: "Dragon Ball Z",
+                  imageSrc: "/dragon_ball_z.jpg",
+                  imageAlt: "Dragon Ball Z",
+                  rank: 3,
+                },
+                {
+                  title: "Attack on Titan",
+                  imageSrc: "/attack_on_titan.jpg",
+                  imageAlt: "Attack on Titan",
+                  rank: 4,
+                },
+              ],
+            },
+            {
+              filter: "Popular",
+              card: [
+                {
+                  title: "One Piece",
+                  imageSrc: "/luffy.jpg",
+                  imageAlt: "Luffy",
+                  rank: 1,
+                },
+                {
+                  title: "Naruto",
+                  imageSrc: "/naruto.jpg",
+                  imageAlt: "Naruto Uzumaki",
+                  rank: 2,
+                },
+                {
+                  title: "Dragon Ball Z",
+                  imageSrc: "/dragon_ball_z.jpg",
+                  imageAlt: "Dragon Ball Z",
+                  rank: 3,
+                },
+                {
+                  title: "Attack on Titan",
+                  imageSrc: "/attack_on_titan.jpg",
+                  imageAlt: "Attack on Titan",
+                  rank: 4,
+                },
+              ],
+            },
+            {
+              filter: "Popular",
+              card: [
+                {
+                  title: "One Piece",
+                  imageSrc: "/luffy.jpg",
+                  imageAlt: "Luffy",
+                  rank: 1,
+                },
+                {
+                  title: "Naruto",
+                  imageSrc: "/naruto.jpg",
+                  imageAlt: "Naruto Uzumaki",
+                  rank: 2,
+                },
+                {
+                  title: "Dragon Ball Z",
+                  imageSrc: "/dragon_ball_z.jpg",
+                  imageAlt: "Dragon Ball Z",
+                  rank: 3,
+                },
+                {
+                  title: "Attack on Titan",
+                  imageSrc: "/attack_on_titan.jpg",
+                  imageAlt: "Attack on Titan",
+                  rank: 4,
+                },
+              ],
+            },
+          ]}
+        />
+      <SideContent />
+      </div>
     </div>
   );
 };

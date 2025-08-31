@@ -1,0 +1,33 @@
+.card-holder-t1{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 75vw;
+}
+
+.card-group-t1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.card-bunch-t1{
+    padding: 1.2rem 1.6rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    width: 100%;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    gap: 1.6rem;
+    border: 1px solid black;
+    /* padding: 10px 10px 10px 10px;  */
+    /* top, left, bottom, right */
+}
+.heading-t1{
+    font-size: 2rem;
+    padding: 10px;
+    border: 1px solid black;
+}

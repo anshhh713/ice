@@ -3,21 +3,22 @@
     flex-direction: column;
 }
 
-.card-group{
+.card-group-t2{
     display: flex;
     flex-direction: column;
+    width: 100vw;
 }
 
-.card-bunch{
+.card-bunch-t2{
     display: flex;
-    
+    width: 100%;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 10px;
     border: 1px solid black;
     padding: 10px 10px 10px 10px; /*top, left, btm , right*/
     
 }
-.heading{
+.heading-t2{
     font-size: 2rem;
     padding: 10px;
 }
