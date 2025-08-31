@@ -1,13 +1,14 @@
-import MainContent from "@/app-components/content/main-content/main-content"
-import Alt1 from "@/app-components/content/alt1/alt1"
-import Style from './page.module.css'
+
+
 export default function Test(){
     return (
         <>
-        <div className={Style.test}>
+        <div className="w-screen h-screen border-black border-2 bg-red-200">
 
         
-        <MainContent />
+        <div className="border-2 border-black w-64 h-64 p-4 m-4">
+            box
+        </div>
         </div>
         </>
     )
