@@ -5,9 +5,22 @@ import { Search } from "lucide-react";
 import User from "../../comp/user-mng/user";
 import Login from "../../comp/user-mng/login";
 import "./navbar.css";
+import UserDropdown from "@/app-components/comp/user-mng/p1/user-dropdown";
 
 export default function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const ToggleUserDropdown = () => {
+    const el = document.querySelector<HTMLElement>(".userDropdown");
+    const e2 = document.querySelector<HTMLElement>(".userDropOverlay");
+    if (el) el.style.display = "block";
+    if (e2) e2.style.display = "block";
+  };
+  const dToggleUserDropdown = () => {
+    const el = document.querySelector<HTMLElement>(".userDropdown");
+    const e2 = document.querySelector<HTMLElement>(".userDropOverlay");
+    if (el) el.style.display = "none";
+    if (e2) e2.style.display = "none";
+  };
 
   return (
     <nav className="navbar">
@@ -45,9 +58,26 @@ export default function Navbar() {
           <Search className="search-b" />
         </button>
       </div>
+      <div className="userDropOverlay" onClick={dToggleUserDropdown}></div>
+      <div className="userDrop">
+        <UserDropdown
+          user={{
+            displayname: "Luffy",
+            email: "luffy@onepiece.anime",
+            logoutFunc: () => {},
+          }}
+        />
+      </div>
       <div className="userprofile">
         {isLoggedIn ? (
-          <User dn="John Cena" dp="/jhoncena.jpg" mode={1} />
+          <>
+            <User
+              dn="John Cena"
+              dp="/jhoncena.jpg"
+              mode={1}
+              f={ToggleUserDropdown}
+            />
+          </>
         ) : (
           <Login oc={() => setIsLoggedIn(true)} />
         )}

@@ -1,0 +1,26 @@
+"use client";
+import { useEffect, useState } from "react";
+import Navbar from "@/app-components/content/navbar/navbar";
+
+export default function UserProfile({ params }: { params: { userid: string } }) {
+  const [user, setUser] = useState<any>(null);
+
+  useEffect(() => {
+    async function fetchUser() {
+      const res = await fetch(`/api/users/profile/${params.userid}`);
+      const data = await res.json();
+      setUser(data.user);
+    }
+    fetchUser();
+  }, [params.userid]);
+
+  if (!user) return <p>Loading...</p>;
+
+  return (
+    <div>
+      <Navbar />
+      <h1>{user.username}'s Profile</h1>
+      <p>Email: {user.email}</p>
+    </div>
+  );
+}

@@ -1,0 +1,60 @@
+.userDropdown{
+    height: 77vh;
+    width: 26vw;
+    box-sizing: border-box;
+    /* box-shadow: 0 0 1rem 1rem rgb(255, 255, 255); */
+    padding: 1rem;
+    background-color:hsl(246, 23%, 16%);
+    border-radius: 1rem;
+    display: none;
+}
+.userDisplayname{
+    padding: 0.2rem 0 0.2rem;
+    color: rgb(215, 163, 207);
+    font-size: 1rem;
+    font-weight: 600;
+}
+.userEmail{
+    color: white;
+    padding: 0.2rem 0 0.3rem;
+    margin-bottom: 1rem;
+}
+.userOptions{
+    
+    margin: 0 0.3rem;
+    width: 96%;
+    height: 68%;
+}
+.userOptions ul{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+.userOptions ul li{
+    width: 100%;
+    
+}
+.userOptions ul li a{
+    border-radius: 2rem;
+    background-color: #373647;
+    padding: 0.5rem 3rem;
+    width: 100%;
+    display: block;
+    color: white;
+
+}
+.userOptions ul li a:hover{
+
+    color: rgb(215, 163, 207);
+    background-color: #8a8a91bb;
+}
+.userLogout{
+    justify-self: end;
+    margin: 0.9rem 0.8rem 0;
+    /* padding: 0 6px; */
+    color: white;
+    cursor: pointer;
+    /* background-color: aqua; */
+}
