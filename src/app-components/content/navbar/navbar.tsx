@@ -23,65 +23,74 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar">
-      <div className="logo-bar">
-        <Image
-          src="/ice.svg"
-          alt="ICE Logo"
-          width={32}
-          height={32}
-          className="logo"
-        />
-        <h2>ICE</h2>
-      </div>
+    <>
+    <div
+      className="userDropOverlay"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) {
+          dToggleUserDropdown();
+        }
+      }}
+    ></div>
+      <nav className="navbar">
+        <div className="logo-bar">
+          <Image
+            src="/ice.svg"
+            alt="ICE Logo"
+            width={32}
+            height={32}
+            className="logo"
+          />
+          <h2>ICE</h2>
+        </div>
 
-      <div className="placehold">
-        <ul>
-          <li>
-            <a href="">Home</a>
-          </li>
-          <li>
-            <a href="">Contact Us</a>
-          </li>
-          <li>
-            <a href="">About</a>
-          </li>
-          <li>
-            <a href="">Features</a>
-          </li>
-        </ul>
-      </div>
+        <div className="placehold">
+          <ul>
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">Contact Us</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="">Features</a>
+            </li>
+          </ul>
+        </div>
 
-      <div className="search-bar">
-        <input className="search" type="search" placeholder="Search..." />
-        <button type="submit" className="search-button">
-          <Search className="search-b" />
-        </button>
-      </div>
-      <div className="userDropOverlay" onClick={dToggleUserDropdown}></div>
-      <div className="userDrop">
-        <UserDropdown
-          user={{
-            displayname: "Luffy",
-            email: "luffy@onepiece.anime",
-            logoutFunc: () => {},
-          }}
-        />
-      </div>
-      <div className="userprofile">
-        {isLoggedIn ? (
-          <>
-            <User
-              dn="John Cena"
-              dp="/jhoncena.jpg"
-              mode={1}
-              f={ToggleUserDropdown}
-            />
-          </>
-        ) : (
-          <Login oc={() => setIsLoggedIn(true)} />
-        )}
-      </div>
-    </nav>
+        <div className="search-bar">
+          <input className="search" type="search" placeholder="Search..." />
+          <button type="submit" className="search-button">
+            <Search className="search-b" />
+          </button>
+        </div>
+        <div className="userDrop">
+          <UserDropdown
+            user={{
+              displayname: "Luffy",
+              email: "luffy@onepiece.anime",
+              logoutFunc: () => {},
+            }}
+          />
+        </div>
+        <div className="userprofile">
+          {isLoggedIn ? (
+            <>
+              <User
+                dn="John Cena"
+                dp="/jhoncena.jpg"
+                mode={1}
+                f={ToggleUserDropdown}
+              />
+            </>
+          ) : (
+            <Login oc={() => setIsLoggedIn(true)} />
+          )}
+        </div>
+      </nav>
+    </>
   );
 }

@@ -1,6 +1,8 @@
 .main-content{
+    position: relative;
     display: flex;
     flex-direction: column;
+    z-index: 7;
     width: 100vw;
     height: auto;
 }
