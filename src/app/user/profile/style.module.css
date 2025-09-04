@@ -1,0 +1,56 @@
+/* style.module.css */
+.profileBGBox {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #d7f5f5, #a0e1e1); /* subtle gradient */
+  display: flex;
+  flex-direction: column;
+}
+
+.profileContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* take remaining height below navbar */
+  padding: 2rem;
+}
+
+.profileContentBox {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  
+  padding: 2rem;
+  width: 350px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.profileContentBox h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.profileDetails {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.profileDetails span {
+  font-weight: 600;
+  margin-left: 0.4rem;
+  background-color: #e6f9f5;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.4rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

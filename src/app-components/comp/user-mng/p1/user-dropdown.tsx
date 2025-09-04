@@ -1,5 +1,6 @@
 "use client"
 import "./user-dropdown.css";
+import Link from "next/link";
 
 type UserDropdownProps = {
   user: { displayname: string; email: string; logoutFunc: () => void };
@@ -12,22 +13,22 @@ const UserDropdown = ({ user }: UserDropdownProps) => {
       <div className="userOptions">
         <ul>
           <li>
-            <a href="/user/profile">Profile</a>
+            <Link className="l" href="/user/profile">Profile</Link>
           </li>
           <li>
-            <a href="">Continue Watching</a>
+            <Link className="l" href="">Continue Watching</Link>
           </li>
           <li>
-            <a href="">Watch List</a>
+            <Link className="l" href="">Watch List</Link>
           </li>
           <li>
-            <a href="">Notification</a>
+            <Link className="l" href="">Notification</Link>
           </li>
           <li>
-            <a href="">Misc</a>
+            <Link className="l" href="">Misc</Link>
           </li>
           <li>
-            <a href="">Setting</a>
+            <Link className="l" href="">Setting</Link>
           </li>
         </ul>
       </div>

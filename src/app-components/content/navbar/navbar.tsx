@@ -2,8 +2,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Search } from "lucide-react";
-import User from "../../comp/user-mng/user";
-import Login from "../../comp/user-mng/login";
+import User from "../../comp/user-mng/p2/user";
+import Login from "../../comp/user-mng/p2/login";
 import "./navbar.css";
 import UserDropdown from "@/app-components/comp/user-mng/p1/user-dropdown";
 

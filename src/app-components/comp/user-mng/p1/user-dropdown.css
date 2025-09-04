@@ -1,3 +1,4 @@
+/* user-dropdown.css */
 .userDropdown{
     height: 77vh;
     width: 26vw;
@@ -36,7 +37,7 @@
     width: 100%;
     
 }
-.userOptions ul li a{
+.userOptions ul li .l{
     border-radius: 2rem;
     background-color: #373647;
     padding: 0.5rem 3rem;
@@ -45,7 +46,7 @@
     color: white;
 
 }
-.userOptions ul li a:hover{
+.userOptions ul li .l:hover{
 
     color: rgb(215, 163, 207);
     background-color: #8a8a91bb;
