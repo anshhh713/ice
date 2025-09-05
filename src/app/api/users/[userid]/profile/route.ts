@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-
+import { users } from "../../../../../../fakedb";
 // GET profile
 export async function GET() {
   // In real app, fetch from DB/session
@@ -17,10 +17,7 @@ export async function PUT(req: NextRequest) {
     const { updatedUsername, updatedDP } = await req.json();
 
     if (!updatedUsername && !updatedDP) {
-      return NextResponse.json(
-        { error: "Nothing to update" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Nothing to update" }, { status: 400 });
     }
 
     // TODO: update user in DB/session here
@@ -30,9 +27,6 @@ export async function PUT(req: NextRequest) {
       updated: { updatedUsername, updatedDP },
     });
   } catch (error: any) {
-    return NextResponse.json(
-      { error: error.message },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

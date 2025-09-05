@@ -16,10 +16,10 @@ const UserDropdown = ({ user }: UserDropdownProps) => {
             <Link className="l" href="/user/profile">Profile</Link>
           </li>
           <li>
-            <Link className="l" href="">Continue Watching</Link>
+            <Link className="l" href="/user/profile/continue-watching">Continue Watching</Link>
           </li>
           <li>
-            <Link className="l" href="">Watch List</Link>
+            <Link className="l" href="/user/profile/watch-list">Watch List</Link>
           </li>
           <li>
             <Link className="l" href="">Notification</Link>
