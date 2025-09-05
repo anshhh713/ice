@@ -4,12 +4,15 @@
   width: 75vw;
   gap: 2rem;
   margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
 .card-group-t1 {
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  
 }
 
 .card-bunch-t1 {
@@ -23,7 +26,7 @@
 .heading-t1 {
   font-size: 1.5rem;
   font-weight: 600;
-  padding: 0.5rem 0;
+  padding: 0.5rem 1.2rem;
   color: #1a202c;
   border: none; /* remove the border */
 }

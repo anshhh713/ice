@@ -1,24 +1,39 @@
-.card-holder-t2{
-    display: flex;
-    flex-direction: column;
+.card-holder-t2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 0;
+  width: 100vw;
+  /* padding-bottom: 2rem; */
 }
 
-.card-group-t2{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
+.card-group-t2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
 }
 
-.card-bunch-t2{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 10px;
-    border: 1px solid black;
-    padding: 10px 10px 10px 10px; /*top, left, btm , right*/
-    
+.heading-t2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
 }
-.heading-t2{
-    font-size: 2rem;
-    padding: 10px;
+
+.card-bunch-t2 {
+  display: flex;
+  flex-wrap: nowrap; /* horizontal scroll */
+  overflow-x: auto;
+  gap: 1.4rem;
+  padding: 0.5rem 1.5rem 2rem;
+  border-radius: 10px;
+}
+
+.card-bunch-t2::-webkit-scrollbar {
+  height: 8px;
+  display: none;
+}
+
+.card-bunch-t2::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 4px;
 }

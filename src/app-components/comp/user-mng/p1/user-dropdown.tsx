@@ -3,7 +3,7 @@ import "./user-dropdown.css";
 import Link from "next/link";
 
 type UserDropdownProps = {
-  user: { displayname: string; email: string; logoutFunc: () => void };
+  user: { displayname: string; email: string; username:string; logoutFunc: () => void };
 };
 const UserDropdown = ({ user }: UserDropdownProps) => {
   return (
@@ -13,22 +13,22 @@ const UserDropdown = ({ user }: UserDropdownProps) => {
       <div className="userOptions">
         <ul>
           <li>
-            <Link className="l" href="/user/profile">Profile</Link>
+            <Link className="l" href={`/user/${user.username}/profile`}>Profile</Link>
           </li>
           <li>
-            <Link className="l" href="/user/profile/continue-watching">Continue Watching</Link>
+            <Link className="l" href={`/user/${user.username}/profile/continue-watching`}>Continue Watching</Link>
           </li>
           <li>
-            <Link className="l" href="/user/profile/watch-list">Watch List</Link>
+            <Link className="l" href={`/user/${user.username}/profile/watch-list`}>Watch List</Link>
           </li>
           <li>
-            <Link className="l" href="">Notification</Link>
+            <Link className="l" href={``}>Notification</Link>
           </li>
           <li>
-            <Link className="l" href="">Misc</Link>
+            <Link className="l" href={``}>Misc</Link>
           </li>
           <li>
-            <Link className="l" href="">Setting</Link>
+            <Link className="l" href={``}>Setting</Link>
           </li>
         </ul>
       </div>

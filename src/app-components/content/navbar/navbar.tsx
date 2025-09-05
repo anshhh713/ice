@@ -1,3 +1,5 @@
+// unused , you can use it if you want...
+
 "use client";
 import { useState } from "react";
 import Image from "next/image";
@@ -6,6 +8,7 @@ import User from "../../comp/user-mng/p2/user";
 import Login from "../../comp/user-mng/p2/login";
 import "./navbar.css";
 import UserDropdown from "@/app-components/comp/user-mng/p1/user-dropdown";
+
 
 export default function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -72,6 +75,7 @@ export default function Navbar() {
             user={{
               displayname: "Luffy",
               email: "luffy@onepiece.anime",
+              username: "",
               logoutFunc: () => {},
             }}
           />

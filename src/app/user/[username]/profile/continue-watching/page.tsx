@@ -1,24 +1,29 @@
 "use client";
-//src/app/user/profile/continue-watching/page.tsx
 import Navbar from "@/app-components/content/navbar/navbar";
 import CardHolderT1 from "@/app-components/comp/card-mng/t1/card-holder";
 import Style from "./style.module.css";
 import { useEffect, useState } from "react";
+import { useParams } from "next/navigation"; // ✅ import useParams
 import type { User } from "../../../../../../fakedb";
 
 export default function ContinueWatching() {
+  const params = useParams();
+  const username = params.username; // ✅ get username from URL
+
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchContList() {
+      if (!username) return;
+
       try {
         const res = await fetch(
-          `/api/users/profile/continue-watching?username=test2`
-        ); // ✅ pass username
+          `/api/users/${username}/profile/continue-watching` // dynamic URL
+        );
         if (!res.ok) throw new Error("Failed to fetch Continue Watching list");
-        const data = await res.json();
-        setUser(data); // data = { success, username, continueWatching }
+        const data: User = await res.json();
+        setUser(data);
       } catch (error) {
         console.error(error);
         setUser(null);
@@ -26,8 +31,9 @@ export default function ContinueWatching() {
         setLoading(false);
       }
     }
+
     fetchContList();
-  }, []);
+  }, [username]);
 
   return (
     <div className={Style.profileContinueWatchingBGBox}>
@@ -43,7 +49,7 @@ export default function ContinueWatching() {
                 card={[
                   {
                     filter: "",
-                    card: user.continueWatching, // ✅ use fakedb data
+                    card: user.continueWatching,
                   },
                 ]}
               />

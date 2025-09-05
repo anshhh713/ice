@@ -2,17 +2,17 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/app-components/content/navbar/navbar";
 
-export default function UserProfile({ params }: { params: { userid: string } }) {
+export default function UserProfile({ params }: { params: { username: string } }) {
   const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
     async function fetchUser() {
-      const res = await fetch(`/api/users/profile/${params.userid}`);
+      const res = await fetch(`/api/users/${params.username}/profile`);
       const data = await res.json();
       setUser(data.user);
     }
     fetchUser();
-  }, [params.userid]);
+  }, [params.username]);
 
   if (!user) return <p>Loading...</p>;
 

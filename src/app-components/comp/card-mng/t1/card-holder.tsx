@@ -10,17 +10,17 @@ type CardHolderT1Props = {
         imageSrc: string;
         imageAlt: string;
         rank: number;
-    }[]}[];
+    }[] | null}[];
 }
 
 const CardHolderT1 = ({card}: CardHolderT1Props) => {
     return(
         <div className="card-holder-t1">
-            {card.map((c, idx) => (
+            {card?.map((c, idx) => (
                 <div className='card-group-t1' key={idx}>
-                    <h3 className="heading-t1">{c.filter}</h3>
+                    <h3 className="heading-t1">{c?.filter}</h3>
                     <div className="card-bunch-t1">
-                        {c.card.map((cc, index) => (
+                        {c.card?.map((cc, index) => (
                             <CardT1
                                 key={index}
                                 title={cc.title}

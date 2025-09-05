@@ -1,11 +1,14 @@
 // app/api/users/profile/continue-watching/route.ts (or adjust path based on your folder structure)
 
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse,NextRequest } from "next/server";
 import { users } from "../../../../../../../fakedb";
 
-export async function GET(req: NextRequest) {
-  const { searchParams } = new URL(req.url);
-  const username = searchParams.get("username");
+interface Params {
+  params: { username: string };
+}
+
+export async function GET(req: NextRequest, { params }: Params) {
+  const { username } = params;
 
   if (!username) {
     return NextResponse.json(
@@ -26,6 +29,7 @@ export async function GET(req: NextRequest) {
   return NextResponse.json({
     success: true,
     username: user.username,
+    email: user.email,
     continueWatching: user.continueWatching,
   });
 }

@@ -1,14 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
-
+import { users, type User } from "../../../../../fakedb";
+const currentUser: User | undefined = users.find(u => u.username === "test1");
 // GET profile
 export async function GET() {
   // In real app, fetch from DB/session
-  const testUser = {
-    email: "testUser@ice.ice",
-    username: "testUser",
-  };
+  
 
-  return NextResponse.json(testUser);
+  return NextResponse.json(currentUser);
 }
 
 // UPDATE profile (use PUT or PATCH)
