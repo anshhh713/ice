@@ -31,7 +31,7 @@ export default function ProfilePage() {
 
   return (
     <div className={Style.profileBGBox}>
-      <Navbar />
+      
       <div className={Style.profileContent}>
         <div className={Style.profileContentBox}>
           <h1>Your Profile</h1>

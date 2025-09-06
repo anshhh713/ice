@@ -7,8 +7,8 @@
   background: linear-gradient(135deg, rgba(199,119,211,0.4), rgba(239,201,255,0.3));
 }
 
-.card {
-  width: 380px;
+.loginCard {
+  width: 350px;
   max-width: 90%;
   background-color: rgba(213,106,229,0.6);
   padding: 2rem 1.5rem;
@@ -20,7 +20,7 @@
   transition: transform 0.2s ease-in-out;
 }
 
-.card:hover {
+.loginCard:hover {
   /* transform: translateY(-5px); */
 }
 
@@ -53,6 +53,7 @@
   border-radius: 8px;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
+  text-align: left;
 }
 
 .input:focus {
@@ -79,31 +80,20 @@
   box-shadow: 0 6px 16px rgba(205,232,110,0.8);
 }
 
-.successMsg {
-  color: #0f9d58;
-  text-align: center;
-  margin-top: 0.8rem;
-}
-
-.errorMsg {
-  color: #d93025;
-  text-align: center;
-  margin-top: 0.8rem;
-}
-
-.loginText {
-  text-align: center;
+.signup {
   margin-top: 1.5rem;
+  font-size: 0.95rem;
+  text-align: center;
 }
 
-.loginText a {
+.signup a {
   color: #4a00e0;
   text-decoration: underline;
   font-weight: 500;
 }
 
 @media (max-width: 480px) {
-  .card {
+  .loginCard {
     width: 90%;
     padding: 1.5rem;
   }

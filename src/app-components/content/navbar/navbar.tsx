@@ -8,6 +8,7 @@ import User from "../../comp/user-mng/p2/user";
 import Login from "../../comp/user-mng/p2/login";
 import "./navbar.css";
 import UserDropdown from "@/app-components/comp/user-mng/p1/user-dropdown";
+import Link from "next/link";
 
 
 export default function Navbar() {
@@ -50,16 +51,16 @@ export default function Navbar() {
         <div className="placehold">
           <ul>
             <li>
-              <a href="">Home</a>
+              <Link className='navbarServerLink' href="">Home</Link>
             </li>
             <li>
-              <a href="">Contact Us</a>
+              <Link className='navbarServerLink' href="">Contact Us</Link>
             </li>
             <li>
-              <a href="">About</a>
+              <Link className='navbarServerLink' href="">About</Link>
             </li>
             <li>
-              <a href="">Features</a>
+              <Link className='navbarServerLink' href="">Features</Link>
             </li>
           </ul>
         </div>

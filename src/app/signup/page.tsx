@@ -1,82 +1,87 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Styles from "./style.module.css";
 
 export default function SignupPage() {
   const router = useRouter();
-  const [user, setUser] = React.useState({
-    email: "",
-    password: "",
-    username: "",
-  });
-  const [message, setMessage] = React.useState("");
+  const [user, setUser] = useState({ email: "", password: "", username: "" });
+  const [message, setMessage] = useState<{ type: "error" | "success"; text: string } | null>(null);
 
   const onSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await fetch("/api/(auth)/users/signup", {
+      const res = await fetch("/api/users/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(user),
       });
 
       const data = await res.json();
-      console.log(data);
 
       if (res.ok) {
-        setMessage("Signup successful! Redirecting...");
+        setMessage({ type: "success", text: "Signup successful! Redirecting..." });
         setTimeout(() => router.push("/login"), 1500);
       } else {
-        setMessage(data.error || "Signup failed. Try again.");
+        setMessage({ type: "error", text: data.error || "Signup failed. Try again." });
       }
-    } catch (err) {
-      setMessage("Something went wrong. Please try later.");
+    } catch {
+      setMessage({ type: "error", text: "Something went wrong. Please try later." });
     }
   };
 
   return (
-    <div className={Styles.wrapperSignup}>
-      <div className={Styles.signup}>
-        <h1 className={Styles.pageTitleSignup}>Signup</h1>
-        <form className={Styles.divSignup} onSubmit={onSignUp}>
-          <label className={Styles.labelSignup}>
-            Username:
+    <div className={Styles.wrapper}>
+      <div className={Styles.card}>
+        <h1 className={Styles.title}>Signup</h1>
+
+        <form className={Styles.form} onSubmit={onSignUp}>
+          <label className={Styles.label}>
+            Username
             <input
-              className={Styles.inputSignup}
               type="text"
               value={user.username}
               onChange={(e) => setUser({ ...user, username: e.target.value })}
-              placeholder="username"
+              placeholder="Enter username"
+              className={Styles.input}
               required
             />
           </label>
-          <label className={Styles.labelSignup}>
-            Email:
+
+          <label className={Styles.label}>
+            Email
             <input
-              className={Styles.inputSignup}
               type="email"
               value={user.email}
               onChange={(e) => setUser({ ...user, email: e.target.value })}
-              placeholder="email"
+              placeholder="Enter email"
+              className={Styles.input}
               required
             />
           </label>
-          <label className={Styles.labelSignup}>
-            Password:
+
+          <label className={Styles.label}>
+            Password
             <input
-              className={Styles.inputSignup}
               type="password"
               value={user.password}
               onChange={(e) => setUser({ ...user, password: e.target.value })}
-              placeholder="password"
+              placeholder="Enter password"
+              className={Styles.input}
               required
             />
           </label>
-          <button className={Styles.signupBtn} type="submit">
+
+          <button className={Styles.button} type="submit">
             Signup
           </button>
-          {message && <p>{message}</p>}
+
+          {message && (
+            <p className={message.type === "error" ? Styles.errorMsg : Styles.successMsg}>
+              {message.text}
+            </p>
+          )}
+
           <p className={Styles.loginText}>
             Already have an account? <a href="/login">Login</a>
           </p>

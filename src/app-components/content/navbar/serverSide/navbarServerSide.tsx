@@ -3,6 +3,7 @@ import '../navbar.css'
 import Image from "next/image";
 import NavbarUserProfile from "../userSide/navbarUserSide"; // client component
 import { Search } from 'lucide-react';
+import Link from 'next/link';
 
 export default function NavbarServer({ user }: { user?: any }) {
   return (
@@ -14,10 +15,10 @@ export default function NavbarServer({ user }: { user?: any }) {
 
       <div className="placehold">
         <ul>
-          <li><a href="/home">Home</a></li>
-          <li><a href="">Contact Us</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Features</a></li>
+          <li><Link className='navbarServerLink' href="/home">Home</Link></li>
+          <li><Link className='navbarServerLink' href="">Contact Us</Link></li>
+          <li><Link className='navbarServerLink' href="">About</Link></li>
+          <li><Link className='navbarServerLink' href="">Features</Link></li>
         </ul>
       </div>
 

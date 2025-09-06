@@ -18,7 +18,7 @@ export default function UserProfile({ params }: { params: { username: string } }
 
   return (
     <div>
-      <Navbar />
+      
       <h1>{user.username}'s Profile</h1>
       <p>Email: {user.email}</p>
     </div>

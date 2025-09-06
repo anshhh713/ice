@@ -37,7 +37,7 @@ export default function ContinueWatching() {
 
   return (
     <div className={Style.profileContinueWatchingBGBox}>
-      <Navbar />
+      
       <div className={Style.profileContinueWatchingContent}>
         <div className={Style.profileContinueWatchingContentBox}>
           <h3>Continue Watching</h3>

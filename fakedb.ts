@@ -11,6 +11,7 @@ type User = {
   email: string;
   displayName: string;
   dp: string;
+  password: string,
   continueWatching: ContWatch[];
 };
 
@@ -20,6 +21,7 @@ const users: User[] = [
     email: "test1@ice.fake",
     displayName: "Test1",
     dp: "/jhoncena.jpg",
+    password: "test@1",
     continueWatching: [
       { title: "One Piece", imageSrc: "/luffy.jpg", imageAlt: "Luffy", rank: 1 },
       { title: "Naruto", imageSrc: "/naruto.jpg", imageAlt: "Naruto Uzumaki", rank: 2 },
@@ -32,6 +34,7 @@ const users: User[] = [
     email: "test2@ice.fake",
     displayName: "Test2",
     dp: "/jhoncena.jpg",
+    password: "test@1",
     continueWatching: [
       { title: "Demon Slayer", imageSrc: "/demon_slayer.jpg", imageAlt: "Tanjiro", rank: 1 },
       { title: "Jujutsu Kaisen", imageSrc: "/jujutsu_kaisen.jpg", imageAlt: "Yuji Itadori", rank: 2 },
@@ -42,19 +45,21 @@ const users: User[] = [
     email: "test3@ice.fake",
     displayName: "Test3",
     dp: "/jhoncena.jpg",
+    password: "test@1",
     continueWatching: [
       { title: "Fullmetal Alchemist", imageSrc: "/fma.jpg", imageAlt: "Edward Elric", rank: 1 },
       { title: "Death Note", imageSrc: "/death_note.jpg", imageAlt: "Light Yagami", rank: 2 },
       { title: "Bleach", imageSrc: "/bleach.png", imageAlt: "Ichigo Kurosaki", rank: 3 },
     ],
   },
-  { username: "test4", email: "test4@ice.fake", displayName: "Test4", dp: "/jhoncena.jpg",continueWatching: [] },
-  { username: "test5", email: "test5@ice.fake",displayName: "Test5", dp: "/jhoncena.jpg",continueWatching: [] },
-  { username: "test6", email: "test6@ice.fake", displayName: "Test6",dp: "/jhoncena.jpg",continueWatching: [] },
-  { username: "test7", email: "test7@ice.fake", displayName: "Test7",dp: "/jhoncena.jpg",continueWatching: [] },
-  { username: "test8", email: "test8@ice.fake",displayName: "Test8", dp: "/jhoncena.jpg",continueWatching: [] },
-  { username: "test9", email: "test9@ice.fake", displayName: "Test9",dp: "/jhoncena.jpg",continueWatching: [] },
-  { username: "test10", email: "test10@ice.fake",displayName: "Test10", dp: "/jhoncena.jpg",continueWatching: [] },
+  { username: "test4", email: "test4@ice.fake", displayName: "Test4", dp: "/jhoncena.jpg",
+    password: "test@1",continueWatching: [] },
+  { username: "test5", email: "test5@ice.fake",displayName: "Test5", dp: "/jhoncena.jpg",password: "test@1",continueWatching: [] },
+  { username: "test6", email: "test6@ice.fake", displayName: "Test6",dp: "/jhoncena.jpg",password: "test@1",continueWatching: [] },
+  { username: "test7", email: "test7@ice.fake", displayName: "Test7",dp: "/jhoncena.jpg",password: "test@1",continueWatching: [] },
+  { username: "test8", email: "test8@ice.fake",displayName: "Test8", dp: "/jhoncena.jpg",password: "test@1",continueWatching: [] },
+  { username: "test9", email: "test9@ice.fake", displayName: "Test9",dp: "/jhoncena.jpg",password: "test@1",continueWatching: [] },
+  { username: "test10", email: "test10@ice.fake",displayName: "Test10", dp: "/jhoncena.jpg",password: "test@1",continueWatching: [] },
 ];
 
 export { users };

@@ -77,7 +77,7 @@
     width: auto;
     max-width: 30vw;
 }
-.placehold a{
+.placehold .navbarServerLink{
     text-decoration: none;
     background-color: royalblue;
     border-radius: 1rem;
@@ -85,7 +85,7 @@
     
 }
 
-.placehold>ul>li> a:hover{
+.placehold>ul>li> .navbarServerLink:hover{
     background-color: pink;
     border-color: pink;
     
